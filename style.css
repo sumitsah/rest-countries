@@ -1,0 +1,411 @@
+:root {
+    /*  (Dark Mode Elements) */
+    --clr-dark-blue: hsl(209, 23%, 22%);
+    /* (Dark Mode Background) */
+    --clr-very-dark-blue: hsl(207, 26%, 17%);
+    /* (Light Mode Text) */
+    --clr-very-dark-blue: hsl(200, 15%, 8%);
+    /* (Light Mode Input) */
+    --clr-dark-gray: hsl(0, 0%, 52%);
+    /* (Light Mode Background) */
+    --clr-very-light-gray: hsl(0, 0%, 98%);
+    /* (Dark Mode Text & Light Mode Elements) */
+    --clr-white: hsl(0, 0%, 100%);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+h1,
+h2,
+p {
+    margin: 0;
+}
+
+body {
+    --background-color: hsl(0, 0%, 98%);
+    --text-color: hsl(200, 15%, 8%);
+    --elements-color: hsl(0, 0%, 98%);
+    margin: 0;
+    font-family: "Nunito Sans", serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+body.dark {
+    --background-color: hsl(207, 26%, 17%);
+    --text-color: hsl(0, 0%, 100%);
+    --elements-color: hsl(209, 23%, 22%);
+}
+
+.container {
+    margin-inline: auto;
+    max-width: 1400px;
+    padding: 1.5rem 0;
+}
+
+.header-container {
+    padding: 2rem 1rem;
+    /* background-color: var(--clr-white); */
+    background-color: var(--elements-color);
+    box-shadow: 0 0 5px 2px rgba(119, 115, 115, 0.39)
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin-inline: auto;
+}
+
+.main-heading {
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.mode {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.mode-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.search-container {
+    display: flex;
+    /* border: 1px solid black; */
+    /* background-color: var(--clr-white); */
+    padding: 1.2rem 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 8px 1px rgba(218, 216, 216, 0.507);
+    border-radius: 4px;
+    background-color: var(--elements-color);
+}
+
+.search-filter-container {
+    padding: 0 1rem;
+}
+
+label {
+    flex-grow: 1;
+}
+
+input[type="search"] {
+    border: none;
+    outline: none;
+    padding-left: 1rem;
+    width: 100%;
+    /* color: var(--clr-dark-gray); */
+    background-color: inherit;
+    color: inherit;
+}
+
+::placeholder {
+    color: hsla(0, 0%, 52%, 0.678);
+}
+
+.custom-select-container {
+    position: relative;
+    width: 200px;
+}
+
+/* Container styling */
+.custom-dropdown-container {
+    position: relative;
+    width: 200px;
+}
+
+/* Custom select box styling */
+.custom-select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: var(--elements-color);
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Simulates space */
+}
+
+/* Dropdown options styling */
+.custom-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    /* Adds space between select and dropdown */
+    left: 0;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: var(--elements-color);
+    color: var(--text-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    overflow: hidden;
+}
+
+/* Individual option styling */
+.dropdown-option {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown-option:hover {
+    background-color: var(--text-color);
+    color: var(--background-color);
+}
+
+/* Hidden class to toggle dropdown visibility */
+.hidden {
+    display: none;
+}
+
+.country-container {
+    margin-inline: auto;
+    padding: 0 3rem;
+    display: grid;
+    gap: 4rem;
+    max-width: 1400px;
+}
+
+.country-card {
+    overflow: hidden;
+    border-radius: 8px;
+    /* border: 1px solid red; */
+    box-shadow: 0 0 8px 1px rgba(218, 216, 216, 0.507);
+    max-width: 400px;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+    background-color: var(--elements-color);
+    color: var(--text-color);
+}
+
+.country-card:hover {
+    transform: scale(1.03);
+    box-shadow: 1px 1px 8px 5px rgba(218, 216, 216, 0.863);
+}
+
+.country-content {
+    padding: 1rem 1rem 2rem 2rem;
+    /* color: var(--clr-very-dark-blue); */
+    color: var(--text-color);
+}
+
+.country-info {
+    display: grid;
+    gap: 0.25rem;
+
+}
+
+.country-info b {
+    font-size: 1.1rem;
+}
+
+.country-heading {
+    font-weight: 800;
+    margin: 1rem 0;
+}
+
+.country-card>img {
+    width: auto;
+    /* or any custom size */
+    height: 100%;
+    /* object-fit: contain; */
+}
+
+/* .country-img {
+    object-fit: cover;
+    height: 50%;
+    width: 100%;
+    overflow: hidden;
+} */
+
+.footer-container {
+    display: grid;
+    gap: 1rem;
+    margin-block: 4rem;
+    margin-inline: 2rem;
+    padding-inline: 2rem;
+    text-align: center;
+}
+
+.hide {
+    display: none;
+}
+
+.btn {
+    padding: 0.5rem 1.5rem;
+    background-color: var(--elements-color);
+    color: var(--text-color);
+    border: none;
+    box-shadow: 0 0 5px 2px rgba(119, 115, 115, 0.39);
+    border-radius: 4px;
+    /* margin-inline: 4rem; */
+    cursor: pointer;
+}
+
+.disabled {
+    cursor: not-allowed;
+}
+
+@media (min-width: 650px) {
+    .country-container {
+        /* padding: 0; */
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .search-filter-container {
+        display: flex;
+        justify-content: space-between;
+        /* padding: 0; */
+    }
+
+    .search-container {
+        width: 40%;
+    }
+
+    .custom-dropdown {
+        top: calc(100% - 2.5rem)
+            /* top: 4rem; */
+    }
+
+    .main-heading {
+        font-size: 1.3rem;
+        font-weight: 800;
+    }
+
+    .mode {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-block: 4rem;
+        max-width: 1400px;
+        margin-inline: 3rem;
+        padding-inline: 0;
+        /* text-align: center; */
+    }
+
+    .hide {
+        display: none;
+    }
+
+}
+
+@media (min-width: 1400px) {
+    .country-container {
+        padding: 0;
+    }
+
+    .search-filter-container {
+        padding: 0;
+    }
+
+    .footer-container {
+        padding-inline: 2rem;
+        margin-inline: auto;
+    }
+
+    .hide {
+        display: none;
+    }
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries API</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="country.css">
+    <script type="module" src="country.js"></script>
+</head>
+
+<body>
+    <main>
+        <div class="header-container">
+            <header>
+                <h1 class="main-heading">Where in the world?</h1>
+                <div class="mode-container">
+                    <i class="fa-regular fa-moon"></i>
+                    <span class="mode">Dark mode</span>
+                </div>
+            </header>
+        </div>
+
+        <div class="button-container">
+            <button class="btn" type="button"> <i class="fa-solid fa-arrow-left"></i> <span>Back </span> </button>
+        </div>
+        <section class="container">
+            <div><img src="https://flagcdn.com/de.svg" alt="" srcset=""></div>
+            <div class="country-card">
+                <h2 class="country-heading">Germany</h2>
+                <div class="country-content">
+                    <div class="country-basic-info native">
+                        <p><b>Native Name: </b><span>
+                                Deutschland
+                            </span> </p>
+                        <p><b>Population: </b><span>
+                                81,770,900
+                            </span></p>
+                        <p><b>Region: </b><span>
+                                Europe
+                            </span> </p>
+                        <p><b>Sub Region: </b><span>
+                                Central Europe
+                            </span> </p>
+                        <p><b>Capital: </b><span>
+                                Berlin
+                            </span> </p>
+                    </div>
+                    <div class="country-basic-info top">
+                        <p><b>Top Level Domain : </b><span>
+                                .de
+                            </span> </p>
+                        <p><b>Currencies: </b><span>
+                                Euro
+                            </span></p>
+                        <p><b>Languages: </b><span>
+                                Deutsch
+                            </span> </p>
+                    </div>
+
+                    <div class="country-basic-info borders">
+                        <p class="border-heading"><b>Border Countries: </b></p>
+                        <div class="border-container">
+                            <span class="border">France</span>
+                            <span class="border">Belgium</span>
+                            <span class="border">Netherlands</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
