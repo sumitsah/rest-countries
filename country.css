@@ -145,6 +145,10 @@ header {
     font-weight: 800;
 }
 
+.main-heading a {
+    text-decoration-line: none;
+}
+
 .mode {
     font-size: 1rem;
     font-weight: 500;
@@ -210,6 +214,7 @@ header {
     box-shadow: 0 0 8px 2px rgba(218, 216, 216, 0.363);
     font-size: 0.85rem;
     border-radius: 2px;
+    text-decoration-line: none;
 }
 
 .border-container {
@@ -257,15 +262,13 @@ header {
 
     .border-container {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     }
 
-    .border-heading {
-        margin: 0;
-    }
-
-    .border {
-        width: fit-content;
+    .borders {
+        grid-area: border;
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -278,6 +281,10 @@ header {
 
     .border {
         width: initial;
+    }
+
+    .border-heading {
+        margin-bottom: 0;
     }
 
     .container {
